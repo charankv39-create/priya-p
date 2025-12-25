@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+body {
+  background: #0b0e11;
+  color: #fff;
+}
+
+header {
+  padding: 20px;
+  text-align: center;
+  background: #12151a;
+}
+
+header h1 {
+  color: #00ff99;
+}
+
+#crypto-table {
+  width: 90%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  background: #161b22;
+  border-radius: 8px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background: #0d1117;
+  color: #00ff99;
+}
+
+tr:nth-child(even) {
+  background: #1c2026;
+}
+
+.coin-row {
+  cursor: pointer;
+}
+
+.price-up { color: #00ff99; }
+.price-down { color: #ff4b4b; }
+
+.detail-row td {
+  padding: 0;
+}
+
+.detail-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.8s ease;
+  background: #0d1117;
+}
+
+.detail-content.open {
+  max-height: 420px;
+}
+
+.detail-inner {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.detail-left {
+  flex: 1;
+  text-align: left;
+}
+
+.detail-right {
+  flex: 2;
+  height: 260px;
+  background: #161b22;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.detail-right canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 6px solid #333;
+  border-top: 6px solid #00ff99;
+  border-radius: 50%;
+  margin: 50px auto;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #999;
+}
